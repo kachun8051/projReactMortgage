@@ -12,6 +12,7 @@ const SectionLoan = ({info, setInfo}) => {
         max={10000000}
         step={10000}
         unit="$"
+        suffix={false}
         onChange={
           (e, v) => setInfo({...info, loanAmount: v})
       } 
@@ -24,6 +25,7 @@ const SectionLoan = ({info, setInfo}) => {
         max={40.0}
         step={0.25}
         unit="%" 
+        suffix={true}
         onChange={
           (e, v) => setInfo({...info, interestRate: v})
         }
@@ -36,6 +38,7 @@ const SectionLoan = ({info, setInfo}) => {
         max={30}
         step={1}
         unit="years" 
+        suffix={true}
         onChange={
           (e, v) => setInfo({...info, loanPeriod: v})          
         }
